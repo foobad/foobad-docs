@@ -140,12 +140,16 @@ items to blacklist from being offered
 ```
 
 ### item_give_min_amount
+overriden by outbound trade reposting.
+
 the minimum amount of items on the offer side
 ```json
 "item_give_min_amount": 2,
 ```
 
 ### item_give_max_amount
+overriden by outbound trade reposting.
+
 the maximum amount of items on the offer side
 ```json
 "item_give_max_amount": 3,
