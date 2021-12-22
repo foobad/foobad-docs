@@ -4,29 +4,32 @@ this document will show you how to properly configure foobad to fit your needs.
 ### latest, default config.json file:
 ```json
 {
-    "foobtrade_token": "foob...",
+    "foobtrade_token": "your foobtra.de token",
     "rolimons_cookies": [
-        "eyJhbGciOiJIUzI1Ni"
+        "your rolimon's _RoliVerification cookie"
     ],
     "roblox_cookies": [
-        "_|WARNING:-DO-NOT-SHARE-THIS"
+        "your roblox .ROBLOSECURITY cookie"
     ],
     "stay_online": true,
     "alert_on_2fa_needed": true,
 
     "post_delay": 15,
-    "post_delay_variance": 2,
+    "post_delay_variance": 3,
 
     "only_request_tags": false,
-    "tag_request_percent": 50,
+    "tag_request_percent": 40,
     "use_any_tag_only_when_needed": true,
+    "tag_override": [],
 
     "item_give_prioritize": [],
     "item_give_blacklist": [],
     "item_give_min_amount": 2,
     "item_give_max_amount": 3,
-    "post_webhook": "https://discord.com/api/webhooks",
-    "error_webhook": "https://discord.com/api/webhooks"
+
+    "post_webhook": "https://discord.com/api/webhooks/...",
+    "error_webhook": "https://discord.com/api/webhooks/...",
+    "webhook_color": "#6f32a8"
 }
 ```
 
@@ -116,6 +119,16 @@ if this is set to `false`, foobad will use the `any` trading tag more often
 "use_any_tag_only_when_needed": false,
 ```
 
+### tag_override
+randomly uses as many of the specified tags in every trade ad's request
+
+the tags can be the following: `any, demand, rares, rap, robux, upgrade, downgrade`
+```json
+"tag_override": [
+    "rap", "demand", "any"
+]
+```
+
 ### item_give_prioritize
 overriden by outbound trade reposting.
 
@@ -165,4 +178,12 @@ the discord webhook url to send successful trade ad posts to
 the discord webhook url to send errors, invalidated cookies, and 2fa required messages to
 ```json
 "error_webhook": "https://discord.com/api/webhooks/...",
+```
+
+### webhook_color
+the color for the discord trade ad posted webhook
+
+takes a color code hex value
+```json
+"webhook_color": "#6f32a8",
 ```
