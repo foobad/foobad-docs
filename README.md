@@ -19,7 +19,8 @@ this document will show you how to properly configure foobad to fit your needs.
 
     "only_request_tags": false,
     "tag_request_percent": 40,
-    "use_any_tag_only_when_needed": true,
+    "use_any_tag_only_when_needed": false,
+    "use_complete_tag_override": false,
     "tag_override": [],
 
     "item_give_prioritize": [],
@@ -127,6 +128,14 @@ the tags can be the following: `any, demand, rares, rap, robux, upgrade, downgra
 "tag_override": [
     "rap", "demand", "any"
 ]
+```
+
+### use_complete_tag_override
+if enabled, doesn't add upgrade/downgrade/any tags automatically to your trades
+
+value can be `true` or `false` and `tag_override` must have data
+```json
+"use_complete_tag_override": false, 
 ```
 
 ### item_give_prioritize
