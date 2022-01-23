@@ -11,6 +11,8 @@ this document will show you how to properly configure foobad to fit your needs.
     "roblox_cookies": [
         "your roblox .ROBLOSECURITY cookie"
     ],
+    "post_ropro_ads": true,
+    
     "stay_online": true,
     "alert_on_2fa_needed": true,
 
@@ -48,6 +50,15 @@ an array of your rolimon's `_RoliVerification` cookies. ([guide for getting your
 ],
 ```
 (notice the commas, foobad will be unable to read your config file if one is misplaced.)
+
+### post_ropro_ads
+posts ropro trade ads ([roblox.com/offers](https://roblox.com/offers)).
+this feature **ONLY** works for accounts that you've provided the roblox cookie for
+
+(value can be either `true` for yes or `false` for no)
+```json
+"post_ropro_ads": true,
+```
 
 ### roblox_cookies
 an array of your roblox account cookies. required for posting trade ads that don't contain just trading tags.
