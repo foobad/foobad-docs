@@ -88,6 +88,18 @@ this feature **ONLY** works for accounts that you've provided the roblox cookie 
 "alert_on_2fa_needed": true,
 ```
 
+### ping_on_2fa
+sends a webhook message when 2fa is required with the content you provide.
+```
+<@discordid> - user mention
+<@&roleid> - role mention
+@everyone / @here - mass mention
+```
+
+```json
+"ping_on_2fa": "<@219541416760705024>",
+```
+
 ### post_delay
 minimum delay in minutes between trade ad posts, forced minimum of `15` minutes
 ```json
